@@ -20,7 +20,7 @@ public class Ej13 {
         System.out.println(result);
     }
 
-    private static List<Double> removeAll(List<Double> numbers, List<Double> numbersToRemove) {
+    public static List<Double> removeAll(List<Double> numbers, List<Double> numbersToRemove) {
         List<Double> result = new ArrayList<>();
 
         for (var number: numbers) {
