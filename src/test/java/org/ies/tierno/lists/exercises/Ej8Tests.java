@@ -7,16 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ej8Tests {
-    public void getMinTest (){
-        List<Double> numbers= List.of(3d, 4d, 3d);
-
-        Double res= Ej8.min(numbers);
-
-        Assertions.assertEquals(4d, res, 0.0001);
-
-    }
     @Test
-    public void minEmptyListTest(){
-        List<Double> numbers= List.of();
+    public void minTest() {
+        var numbers = List.of(2d, 1.0d, 7d, 99d);
+
+        var min = Ej8.min(numbers);
+
+        Assertions.assertEquals(1d, min, 0.0001);
+    }
+
+    @Test
+    public void minEmptyListTest() {
+        List<Double> numbers = List.of();
+
+        Double min = Ej8.min(numbers);
+
+        Assertions.assertNull(min);
     }
 }
